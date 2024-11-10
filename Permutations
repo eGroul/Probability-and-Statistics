@@ -1,0 +1,27 @@
+#include <iostream>
+
+float Factorial(float n);
+int main()
+{
+	float n;
+	float r;
+	std::cout << "The number of permutations of 'r' items selected form 'n' different items. (but, 0<=r<=n)\n";
+
+	std::cout << "n: "; std::cin >> n;
+	std::cout << "r: "; std::cin >> r;
+
+	if (0 > r || r > n)
+	{
+		std::cout << "Error"; 
+		return 0;
+	}
+
+	std::cout << "-> " << Factorial(n) / Factorial(n - r);
+	return 0;
+}
+float Factorial(float n)
+{
+	if (n <= 1)
+		return 1;
+	return n * Factorial(n - 1);
+}
