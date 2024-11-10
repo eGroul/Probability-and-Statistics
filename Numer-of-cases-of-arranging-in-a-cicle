@@ -1,0 +1,17 @@
+#include <iostream>
+
+float Factorial(float n);
+int main()
+{
+	int n;
+	std::cout << "Number of cases of arranging 'n' different objects in a circle.\n";
+	std::cout << "n: "; std::cin >> n;
+	std::cout << Factorial(n - 1);
+	return 0;
+}
+float Factorial(float n)
+{
+	if (n <= 1)
+		return 1;
+	return n * Factorial(n - 1);
+}
